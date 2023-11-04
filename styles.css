@@ -1,0 +1,110 @@
+/* =================================================================== 
+// # Table of Content
+======================================================================*/
+/* 
+//  - Base
+//  - Accordion
+//  - Table
+//
+*/
+
+
+/* ================================== 
+// #Base
+=====================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+ 
+a {
+    color: #285FC0;
+}
+
+
+summary {
+    border-bottom: 1px solid #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;    
+    padding: 0 16px;
+    height: 50px;
+}
+.accordion-container {
+    padding: 0 16px;
+}
+
+.accordion-container strong {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+summary:first-child {
+    border-top: 1px solid #E5E5E5;
+}
+
+summary::after {
+    content: url("data:image/svg+xml,%3Csvg class='w-8 h-8' fill='currentColor' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M13.418 7.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0l-3.908-3.83a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L10 11l3.418-3.141z'%3E%3C/path%3E%3C/svg%3E");
+    height: 20px;
+    width: 20px;
+    font-size: 22px;
+    transform: translateY(0px);
+    
+}
+
+details[open] summary:after {
+    content: url("data:image/svg+xml,%3Csvg fill='currentColor' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6.582 12.141a.695.695 0 0 1-.978 0 .68.68 0 0 1 0-.969l3.908-3.83a.697.697 0 0 1 .979 0l3.908 3.83a.68.68 0 0 1 0 .969.697.697 0 0 1-.979 0L10 9l-3.418 3.141z'%3E%3C/path%3E%3C/svg%3E");
+    transform: translateY(0%);
+    
+}
+
+
+/* ================================== 
+// #Table
+=====================================*/
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table tbody tr:first-of-type {
+    background-color: #fbd4b4;
+    font-family: bold;
+}
+
+/* Selects the "Heading" */
+table tbody tr:first-of-type p {
+    padding: 6px 10px;
+
+}
+
+
+table tbody tr td{
+    border: 1pt solid windowtext;
+}
+
+/* Selects the other Table Rows Inside Text */
+table tbody tr td p {
+    padding: 0px 10px;
+}
+
+/* 
+// Makes the table rows switch color
+*/
+table tbody tr:nth-child(odd):not(:first-child) {
+    background-color: #ffffff;
+}
+
+table tbody tr:nth-child(even):not(:first-child) {
+    background-color: #f6f4f4;
+}
